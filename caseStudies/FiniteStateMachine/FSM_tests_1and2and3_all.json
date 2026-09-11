@@ -1,0 +1,434 @@
+[
+    {
+        "traceID": "test1",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_nominal_state",
+                "ap_transition_state",
+                "ap_standby_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                true,
+                0.5,
+                true,
+                3,
+                false,
+                1,
+                0,
+                3
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test2",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                true,
+                0.5,
+                true,
+                3,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test3",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                false,
+                true,
+                true,
+                0,
+                true,
+                3,
+                true,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test4",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                true,
+                0.5,
+                true,
+                3.5,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test5",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                false,
+                true,
+                false,
+                0,
+                true,
+                0.5,
+                true,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test6",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                false,
+                0.5,
+                false,
+                3.5,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test7",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_nominal_state",
+                "ap_transition_state",
+                "ap_standby_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                false,
+                false,
+                false,
+                0,
+                true,
+                0.5,
+                false,
+                1,
+                0,
+                3
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test8",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_nominal_state",
+                "ap_transition_state",
+                "ap_standby_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                false,
+                0,
+                false,
+                3,
+                false,
+                1,
+                0,
+                3
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test9",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                false,
+                false,
+                0,
+                true,
+                1,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test10",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_nominal_state",
+                "ap_transition_state",
+                "ap_standby_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                true,
+                true,
+                true,
+                false,
+                0,
+                true,
+                1,
+                false,
+                1,
+                0,
+                3
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test11",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                true,
+                true,
+                true,
+                false,
+                -1,
+                true,
+                0,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    },
+    {
+        "traceID": "test12",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "standby",
+                "state",
+                "supported",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                false,
+                0,
+                false,
+                0,
+                false,
+                3,
+                0,
+                1
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    }
+]

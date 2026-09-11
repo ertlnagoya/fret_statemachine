@@ -1,0 +1,98 @@
+[
+    {
+        "testId": "test1",
+        "testTrace": {
+            "keys": [
+                "good",
+                "state",
+                "supported",
+                "STATE",
+                "ap_nominal_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    true,
+                    0,
+                    true,
+                    1,
+                    1,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "testId": "test2",
+        "testTrace": {
+            "keys": [
+                "good",
+                "state",
+                "supported",
+                "STATE",
+                "ap_nominal_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    false,
+                    0,
+                    true,
+                    2,
+                    1,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "testId": "test3",
+        "testTrace": {
+            "keys": [
+                "good",
+                "state",
+                "supported",
+                "STATE",
+                "ap_nominal_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    true,
+                    0.5,
+                    true,
+                    1.5,
+                    1,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "testId": "test4",
+        "testTrace": {
+            "keys": [
+                "good",
+                "state",
+                "supported",
+                "STATE",
+                "ap_nominal_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    true,
+                    0,
+                    false,
+                    0.5,
+                    1,
+                    0
+                ]
+            ]
+        }
+    }
+]

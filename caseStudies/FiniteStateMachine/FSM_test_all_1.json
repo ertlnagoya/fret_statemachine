@@ -1,0 +1,52 @@
+[
+    {
+        "traceID": "test1",
+        "traceDescription": "",
+        "theTrace": {
+            "keys": [
+                "apfail",
+                "good",
+                "limits",
+                "request",
+                "senstate",
+                "standby",
+                "state",
+                "supported",
+                "SENSTATE",
+                "STATE",
+                "pullup",
+                "ap_standby_state",
+                "ap_transition_state",
+                "ap_nominal_state",
+                "sen_nominal_state",
+                "sen_transition_state",
+                "ap_maneuver_state",
+                "sen_fault_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                false,
+                true,
+                true,
+                true,
+                1,
+                false,
+                2,
+                true,
+                0,
+                4,
+                true,
+                3,
+                0,
+                1,
+                0,
+                1,
+                2,
+                2
+            ]
+        },
+        "saveToReqID": "*",
+        "saveToComponent": "*",
+        "saveToProject": ""
+    }
+]

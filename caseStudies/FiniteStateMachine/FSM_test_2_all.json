@@ -1,0 +1,68 @@
+[
+    {
+        "testId": "test1",
+        "testTrace": {
+            "keys": [
+                "standby",
+                "state",
+                "STATE",
+                "ap_standby_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    true,
+                    0,
+                    3,
+                    3,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "testId": "test2",
+        "testTrace": {
+            "keys": [
+                "standby",
+                "state",
+                "STATE",
+                "ap_standby_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    false,
+                    0,
+                    4,
+                    3,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "testId": "test3",
+        "testTrace": {
+            "keys": [
+                "standby",
+                "state",
+                "STATE",
+                "ap_standby_state",
+                "ap_transition_state"
+            ],
+            "traceLength": 1,
+            "values": [
+                [
+                    true,
+                    0.5,
+                    3.5,
+                    3,
+                    0
+                ]
+            ]
+        }
+    }
+]

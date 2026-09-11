@@ -1,0 +1,498 @@
+{
+    "requirements": [
+        {
+            "reqid": "TS-004",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": " The turnstile  shall always satisfy if preBool(false,  state = 0  & !(  coin )) then  state = 0 ",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "null",
+                "probability": "null",
+                "timing": "always",
+                "response": "satisfaction",
+                "variables": [
+                    "state",
+                    "coin"
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    0,
+                    12
+                ],
+                "timingTextRange": [
+                    21,
+                    26
+                ],
+                "post_condition": "(preBool ( false , state = 0 & ! ( coin ) ) => state = 0)",
+                "responseTextRange": [
+                    28,
+                    94
+                ],
+                "diagramVariables": "Response = <b><i>(preBool ( false , state = 0 & ! ( coin ) ) => state = 0)</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(preBool ( false , state = 0 & ! ( coin ) ) => state = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(preBool ( false , state = 0 & ! ( coin ) ) => state = 0)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "post_condition_unexp_pt": "((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 0) & (! coin))))) -> (state = 0))",
+                "post_condition_unexp_ft": "(preBool(FALSE,((state = 0) & (! coin))) -> (state = 0))",
+                "post_condition_unexp_pctl": "(preBool(FALSE,((state = 0) & (! coin))) -> (state = 0))",
+                "post_condition_SMV_pt": "((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 0) & (! coin))))) -> (state = 0))",
+                "post_condition_SMV_ft": "(preBool(FALSE,((state = 0) & (! coin))) -> (state = 0))",
+                "post_condition_MLTL_ft": "(preBool(FALSE,((state = 0) & (! coin))) -> (state = 0))",
+                "post_condition_PRISM_pctl": "(preBool(FALSE,((state = 0) & (! coin))) -> (state = 0))",
+                "ft": "(LAST V (preBool(FALSE,((state = 0) & (! coin))) -> (state = 0)))",
+                "pt": "(H ((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 0) & (! coin))))) -> (state = 0)))",
+                "pctl": "(P>=1[(G (preBool(FALSE,((state = 0) & (! coin))) -> (state = 0)))])",
+                "ptExpanded": "(H ((Y ((state = 0) & (! coin))) -> (state = 0)))",
+                "CoCoSpecCode": "H((YtoPre(((state = 0) and not (coin))) => (state = 0)))",
+                "ftExpanded": "(LAST V (preBool(FALSE,((state = 0) & (! coin))) -> (state = 0)))",
+                "pctlExpanded": "(P>=1[(G (preBool(FALSE,((state = 0) & (! coin))) -> (state = 0)))])",
+                "ftInfAUExpanded": "(G (preBool(FALSE,((state = 0) & (! coin))) -> (state = 0)))",
+                "mltlExpanded": "(G[0,M] p0)",
+                "WESTMapping": "p0: (preBool(false,((state = 0) & (! coin))) -> (state = 0))",
+                "R2U2Code": "(prev(false,((state == 0) && (! coin))) -> (state == 0))",
+                "component": "turnstile"
+            },
+            "_id": "2b4539a0-ad97-11f1-b062-a534345e4db6"
+        },
+        {
+            "reqid": "TS-003",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": "Upon ( state = 1  &  push )  the turnstile  shall at the next timepoint satisfy  state = 0 ",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "regular",
+                "probability": "null",
+                "timing": "next",
+                "response": "satisfaction",
+                "variables": [
+                    "state",
+                    "push"
+                ],
+                "qualifier_word": "upon",
+                "pre_condition": "(( state = 1 & push ))",
+                "regular_condition": "(( state = 1 & push ))",
+                "conditionTextRange": [
+                    0,
+                    26
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    29,
+                    41
+                ],
+                "timingTextRange": [
+                    50,
+                    70
+                ],
+                "post_condition": "(state = 0)",
+                "responseTextRange": [
+                    72,
+                    89
+                ],
+                "diagramVariables": "TC = <b><i>(( state = 1 & push ))</i></b>, Response = <b><i>(state = 0)</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(( state = 1 & push ))</i></b> is true and any point in the interval where <b><i>(( state = 1 & push ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(state = 0)</i></b> must hold at the next time step.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(( state = 1 & push ))</i></b> is true and any point in the interval where <b><i>(( state = 1 & push ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(state = 0)</i></b> must hold at the next time step.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_next_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "regular_condition_unexp_pt": "((state = 1) & push)",
+                "regular_condition_unexp_ft": "((state = 1) & push)",
+                "regular_condition_unexp_pctl": "((state = 1) & push)",
+                "regular_condition_SMV_pt": "((state = 1) & push)",
+                "regular_condition_SMV_ft": "((state = 1) & push)",
+                "regular_condition_MLTL_ft": "((state = 1) & push)",
+                "regular_condition_PRISM_pctl": "((state = 1) & push)",
+                "post_condition_unexp_pt": "(state = 0)",
+                "post_condition_unexp_ft": "(state = 0)",
+                "post_condition_unexp_pctl": "(state = 0)",
+                "post_condition_SMV_pt": "(state = 0)",
+                "post_condition_SMV_ft": "(state = 0)",
+                "post_condition_MLTL_ft": "(state = 0)",
+                "post_condition_PRISM_pctl": "(state = 0)",
+                "ft": "((LAST V (((! ((state = 1) & push)) & ((! LAST) & (X ((state = 1) & push)))) -> (X (LAST | (X (state = 0)))))) & (((state = 1) & push) -> (LAST | (X (state = 0)))))",
+                "pt": "(H ((Y (((state = 1) & push) & (Z (! ((state = 1) & push))))) -> ((state = 0) | (Z FALSE))))",
+                "pctl": "P>=1[((G (((! ((state = 1) & push)) & (X ((state = 1) & push))) => (X (P>=1[(LAST | (X (state = 0)))])))) & (((state = 1) & push) => (P>=1[(LAST | (X (state = 0)))])))]",
+                "ptExpanded": "(H ((Y (((state = 1) & push) & (Z (! ((state = 1) & push))))) -> ((state = 0) | (Z FALSE))))",
+                "CoCoSpecCode": "H((YtoPre((((state = 1) and push) and ZtoPre(not (((state = 1) and push))))) => ((state = 0) or ZtoPre(false))))",
+                "ftExpanded": "((LAST V (((! ((state = 1) & push)) & ((! LAST) & (X ((state = 1) & push)))) -> (X (LAST | (X (state = 0)))))) & (((state = 1) & push) -> (LAST | (X (state = 0)))))",
+                "pctlExpanded": "P>=1[((G (((! ((state = 1) & push)) & (X ((state = 1) & push))) => (X (P>=1[(false | (X (state = 0)))])))) & (((state = 1) & push) => (P>=1[(false | (X (state = 0)))])))]",
+                "ftInfAUExpanded": "((G (((! ((state = 1) & push)) & (X ((state = 1) & push))) -> (X (X (state = 0))))) & (((state = 1) & push) -> (X (state = 0))))",
+                "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[2,2] p1))) & (p0 -> (F[1,1] p1)))",
+                "WESTMapping": "p0: ((state = 1) & push)<br/>p1: (state = 0)",
+                "R2U2Code": "((((! ((state == 1) && push)) && (F[1,1] ((state == 1) && push))) -> (F[2,2] (state == 0))) && (((TAU == 0) && ((state == 1) && push)) -> (F[1,1] (state == 0))))",
+                "component": "turnstile"
+            },
+            "_id": "4986e440-ad97-11f1-b062-a534345e4db6"
+        },
+        {
+            "reqid": "TS-005",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": " The turnstile  shall always satisfy if preBool(false,  state = 1  & !(  push )) then  state = 1 ",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "null",
+                "probability": "null",
+                "timing": "always",
+                "response": "satisfaction",
+                "variables": [
+                    "state",
+                    "push"
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    0,
+                    12
+                ],
+                "timingTextRange": [
+                    21,
+                    26
+                ],
+                "post_condition": "(preBool ( false , state = 1 & ! ( push ) ) => state = 1)",
+                "responseTextRange": [
+                    28,
+                    94
+                ],
+                "diagramVariables": "Response = <b><i>(preBool ( false , state = 1 & ! ( push ) ) => state = 1)</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(preBool ( false , state = 1 & ! ( push ) ) => state = 1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(preBool ( false , state = 1 & ! ( push ) ) => state = 1)</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "post_condition_unexp_pt": "((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 1) & (! push))))) -> (state = 1))",
+                "post_condition_unexp_ft": "(preBool(FALSE,((state = 1) & (! push))) -> (state = 1))",
+                "post_condition_unexp_pctl": "(preBool(FALSE,((state = 1) & (! push))) -> (state = 1))",
+                "post_condition_SMV_pt": "((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 1) & (! push))))) -> (state = 1))",
+                "post_condition_SMV_ft": "(preBool(FALSE,((state = 1) & (! push))) -> (state = 1))",
+                "post_condition_MLTL_ft": "(preBool(FALSE,((state = 1) & (! push))) -> (state = 1))",
+                "post_condition_PRISM_pctl": "(preBool(FALSE,((state = 1) & (! push))) -> (state = 1))",
+                "ft": "(LAST V (preBool(FALSE,((state = 1) & (! push))) -> (state = 1)))",
+                "pt": "(H ((((Z FALSE) & FALSE) | ((Y TRUE) & (Y ((state = 1) & (! push))))) -> (state = 1)))",
+                "pctl": "(P>=1[(G (preBool(FALSE,((state = 1) & (! push))) -> (state = 1)))])",
+                "ptExpanded": "(H ((Y ((state = 1) & (! push))) -> (state = 1)))",
+                "CoCoSpecCode": "H((YtoPre(((state = 1) and not (push))) => (state = 1)))",
+                "ftExpanded": "(LAST V (preBool(FALSE,((state = 1) & (! push))) -> (state = 1)))",
+                "pctlExpanded": "(P>=1[(G (preBool(FALSE,((state = 1) & (! push))) -> (state = 1)))])",
+                "ftInfAUExpanded": "(G (preBool(FALSE,((state = 1) & (! push))) -> (state = 1)))",
+                "mltlExpanded": "(G[0,M] p0)",
+                "WESTMapping": "p0: (preBool(false,((state = 1) & (! push))) -> (state = 1))",
+                "R2U2Code": "(prev(false,((state == 1) && (! push))) -> (state == 1))",
+                "component": "turnstile"
+            },
+            "_id": "66858790-ad97-11f1-b062-a534345e4db6"
+        },
+        {
+            "reqid": "TS-006",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": "The  turnstile  shall always satisfy  (state = 0 | state = 1) ",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "null",
+                "probability": "null",
+                "timing": "always",
+                "response": "satisfaction",
+                "variables": [
+                    "state"
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    0,
+                    13
+                ],
+                "timingTextRange": [
+                    22,
+                    27
+                ],
+                "post_condition": "(( state = 0 | state = 1 ))",
+                "responseTextRange": [
+                    29,
+                    60
+                ],
+                "diagramVariables": "Response = <b><i>(( state = 0 | state = 1 ))</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(( state = 0 | state = 1 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(( state = 0 | state = 1 ))</i></b> must hold at all time points between (and including) the trigger and the end of the interval.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_null_always_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "post_condition_unexp_pt": "((state = 0) | (state = 1))",
+                "post_condition_unexp_ft": "((state = 0) | (state = 1))",
+                "post_condition_unexp_pctl": "((state = 0) | (state = 1))",
+                "post_condition_SMV_pt": "((state = 0) | (state = 1))",
+                "post_condition_SMV_ft": "((state = 0) | (state = 1))",
+                "post_condition_MLTL_ft": "((state = 0) | (state = 1))",
+                "post_condition_PRISM_pctl": "((state = 0) | (state = 1))",
+                "ft": "(LAST V ((state = 0) | (state = 1)))",
+                "pt": "(H ((state = 0) | (state = 1)))",
+                "pctl": "(P>=1[(G ((state = 0) | (state = 1)))])",
+                "ptExpanded": "(H ((state = 0) | (state = 1)))",
+                "CoCoSpecCode": "H(((state = 0) or (state = 1)))",
+                "ftExpanded": "(LAST V ((state = 0) | (state = 1)))",
+                "pctlExpanded": "(P>=1[(G ((state = 0) | (state = 1)))])",
+                "ftInfAUExpanded": "(G ((state = 0) | (state = 1)))",
+                "mltlExpanded": "(G[0,M] p0)",
+                "WESTMapping": "p0: ((state = 0) | (state = 1))",
+                "R2U2Code": "((state == 0) || (state == 1))",
+                "component": "turnstile"
+            },
+            "_id": "80ea4620-ad97-11f1-b062-a534345e4db6"
+        },
+        {
+            "reqid": "TS-001",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": "The turnstile shall initially satisfy state = 0",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "null",
+                "probability": "null",
+                "timing": "immediately",
+                "response": "satisfaction",
+                "variables": [
+                    "state"
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    0,
+                    12
+                ],
+                "timingTextRange": [
+                    20,
+                    28
+                ],
+                "post_condition": "(state = 0)",
+                "responseTextRange": [
+                    30,
+                    46
+                ],
+                "diagramVariables": "Response = <b><i>(state = 0)</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, if trigger holds then <b><i>(state = 0)</i></b> also holds at the same time point.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval.<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, if trigger holds then <b><i>(state = 0)</i></b> also holds at the same time point.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_null_immediately_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "post_condition_unexp_pt": "(state = 0)",
+                "post_condition_unexp_ft": "(state = 0)",
+                "post_condition_unexp_pctl": "(state = 0)",
+                "post_condition_SMV_pt": "(state = 0)",
+                "post_condition_SMV_ft": "(state = 0)",
+                "post_condition_MLTL_ft": "(state = 0)",
+                "post_condition_PRISM_pctl": "(state = 0)",
+                "ft": "(state = 0)",
+                "pt": "(H ((Z FALSE) -> (state = 0)))",
+                "pctl": "(P>=1[(state = 0)])",
+                "ptExpanded": "(H ((Z FALSE) -> (state = 0)))",
+                "CoCoSpecCode": "H((ZtoPre(false) => (state = 0)))",
+                "ftExpanded": "(state = 0)",
+                "pctlExpanded": "(P>=1[(state = 0)])",
+                "ftInfAUExpanded": "(state = 0)",
+                "mltlExpanded": "p0",
+                "WESTMapping": "p0: (state = 0)",
+                "R2U2Code": "((TAU == 0) -> (state == 0))",
+                "component": "turnstile"
+            },
+            "_id": "a1807a00-ad95-11f1-b062-a534345e4db6"
+        },
+        {
+            "reqid": "TS-002",
+            "parent_reqid": "",
+            "project": "TurnstileHandsOn",
+            "rationale": "",
+            "comments": "",
+            "fulltext": "Upon ( state = 0  &  coin )  the turnstile  shall at the next timepoint satisfy  state = 1 ",
+            "status": "",
+            "semantics": {
+                "type": "nasa",
+                "scope": {
+                    "type": "null"
+                },
+                "condition": "regular",
+                "probability": "null",
+                "timing": "next",
+                "response": "satisfaction",
+                "variables": [
+                    "state",
+                    "coin"
+                ],
+                "qualifier_word": "upon",
+                "pre_condition": "(( state = 0 & coin ))",
+                "regular_condition": "(( state = 0 & coin ))",
+                "conditionTextRange": [
+                    0,
+                    26
+                ],
+                "component_name": "turnstile",
+                "componentTextRange": [
+                    29,
+                    41
+                ],
+                "timingTextRange": [
+                    50,
+                    70
+                ],
+                "post_condition": "(state = 1)",
+                "responseTextRange": [
+                    72,
+                    89
+                ],
+                "diagramVariables": "TC = <b><i>(( state = 0 & coin ))</i></b>, Response = <b><i>(state = 1)</i></b>.",
+                "description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(( state = 0 & coin ))</i></b> is true and any point in the interval where <b><i>(( state = 0 & coin ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, <b><i>(state = 1)</i></b> must hold at the next time step.",
+                "probabilistic_description": "SCOPE: in the interval defined by the entire execution.<br>TRIGGER: first point in the interval if <b><i>(( state = 0 & coin ))</i></b> is true and any point in the interval where <b><i>(( state = 0 & coin ))</i></b> becomes true (from false).<br>REQUIRED BEHAVIOR: for every trigger, with probability >=1, <b><i>(state = 1)</i></b> must hold at the next time step.",
+                "diagram": "_media/user-interface/examples/svgDiagrams/null_regular_next_satisfaction.svg",
+                "scope_mode_pt": "BAD_PT",
+                "scope_mode_ft": "BAD_FT",
+                "regular_condition_unexp_pt": "((state = 0) & coin)",
+                "regular_condition_unexp_ft": "((state = 0) & coin)",
+                "regular_condition_unexp_pctl": "((state = 0) & coin)",
+                "regular_condition_SMV_pt": "((state = 0) & coin)",
+                "regular_condition_SMV_ft": "((state = 0) & coin)",
+                "regular_condition_MLTL_ft": "((state = 0) & coin)",
+                "regular_condition_PRISM_pctl": "((state = 0) & coin)",
+                "post_condition_unexp_pt": "(state = 1)",
+                "post_condition_unexp_ft": "(state = 1)",
+                "post_condition_unexp_pctl": "(state = 1)",
+                "post_condition_SMV_pt": "(state = 1)",
+                "post_condition_SMV_ft": "(state = 1)",
+                "post_condition_MLTL_ft": "(state = 1)",
+                "post_condition_PRISM_pctl": "(state = 1)",
+                "ft": "((LAST V (((! ((state = 0) & coin)) & ((! LAST) & (X ((state = 0) & coin)))) -> (X (LAST | (X (state = 1)))))) & (((state = 0) & coin) -> (LAST | (X (state = 1)))))",
+                "pt": "(H ((Y (((state = 0) & coin) & (Z (! ((state = 0) & coin))))) -> ((state = 1) | (Z FALSE))))",
+                "pctl": "P>=1[((G (((! ((state = 0) & coin)) & (X ((state = 0) & coin))) => (X (P>=1[(LAST | (X (state = 1)))])))) & (((state = 0) & coin) => (P>=1[(LAST | (X (state = 1)))])))]",
+                "ptExpanded": "(H ((Y (((state = 0) & coin) & (Z (! ((state = 0) & coin))))) -> ((state = 1) | (Z FALSE))))",
+                "CoCoSpecCode": "H((YtoPre((((state = 0) and coin) and ZtoPre(not (((state = 0) and coin))))) => ((state = 1) or ZtoPre(false))))",
+                "ftExpanded": "((LAST V (((! ((state = 0) & coin)) & ((! LAST) & (X ((state = 0) & coin)))) -> (X (LAST | (X (state = 1)))))) & (((state = 0) & coin) -> (LAST | (X (state = 1)))))",
+                "pctlExpanded": "P>=1[((G (((! ((state = 0) & coin)) & (X ((state = 0) & coin))) => (X (P>=1[(false | (X (state = 1)))])))) & (((state = 0) & coin) => (P>=1[(false | (X (state = 1)))])))]",
+                "ftInfAUExpanded": "((G (((! ((state = 0) & coin)) & (X ((state = 0) & coin))) -> (X (X (state = 1))))) & (((state = 0) & coin) -> (X (state = 1))))",
+                "mltlExpanded": "((G[0,M] (((! p0) & (F[1,1] p0)) -> (F[2,2] p1))) & (p0 -> (F[1,1] p1)))",
+                "WESTMapping": "p0: ((state = 0) & coin)<br/>p1: (state = 1)",
+                "R2U2Code": "((((! ((state == 0) && coin)) && (F[1,1] ((state == 0) && coin))) -> (F[2,2] (state == 1))) && (((TAU == 0) && ((state == 0) && coin)) -> (F[1,1] (state == 1))))",
+                "component": "turnstile"
+            },
+            "_id": "aede2610-ad96-11f1-b062-a534345e4db6"
+        }
+    ],
+    "variables": [
+        {
+            "project": "TurnstileHandsOn",
+            "component_name": "turnstile",
+            "variable_name": "coin",
+            "reqs": [
+                "aede2610-ad96-11f1-b062-a534345e4db6",
+                "2b4539a0-ad97-11f1-b062-a534345e4db6"
+            ],
+            "dataType": "boolean",
+            "idType": "Input",
+            "moduleName": "",
+            "description": "",
+            "assignment": "",
+            "assignmentVariables": [],
+            "copilotAssignment": "",
+            "r2u2Assignment": "",
+            "smvAssignment": "",
+            "smvAssignmentVariables": [],
+            "modeRequirement": "",
+            "modeldoc": false,
+            "modeldoc_id": "",
+            "modeldoc_vectorIndex": null,
+            "modelComponent": "",
+            "completed": true,
+            "r2u2Completed": true,
+            "smvCompleted": true,
+            "_id": "TurnstileHandsOnturnstilecoin"
+        },
+        {
+            "project": "TurnstileHandsOn",
+            "component_name": "turnstile",
+            "variable_name": "push",
+            "reqs": [
+                "4986e440-ad97-11f1-b062-a534345e4db6",
+                "66858790-ad97-11f1-b062-a534345e4db6"
+            ],
+            "dataType": "boolean",
+            "idType": "Input",
+            "moduleName": "",
+            "description": "",
+            "assignment": "",
+            "assignmentVariables": [],
+            "copilotAssignment": "",
+            "r2u2Assignment": "",
+            "smvAssignment": "",
+            "smvAssignmentVariables": [],
+            "modeRequirement": "",
+            "modeldoc": false,
+            "modeldoc_id": "",
+            "modeldoc_vectorIndex": null,
+            "modelComponent": "",
+            "completed": true,
+            "r2u2Completed": true,
+            "smvCompleted": true,
+            "_id": "TurnstileHandsOnturnstilepush"
+        },
+        {
+            "project": "TurnstileHandsOn",
+            "component_name": "turnstile",
+            "variable_name": "state",
+            "reqs": [
+                "aede2610-ad96-11f1-b062-a534345e4db6",
+                "2b4539a0-ad97-11f1-b062-a534345e4db6",
+                "4986e440-ad97-11f1-b062-a534345e4db6",
+                "66858790-ad97-11f1-b062-a534345e4db6",
+                "80ea4620-ad97-11f1-b062-a534345e4db6",
+                "a1807a00-ad95-11f1-b062-a534345e4db6"
+            ],
+            "dataType": "integer",
+            "idType": "Output",
+            "moduleName": "",
+            "description": "",
+            "assignment": "",
+            "assignmentVariables": [],
+            "copilotAssignment": "",
+            "r2u2Assignment": "",
+            "smvAssignment": "",
+            "smvAssignmentVariables": [],
+            "modeRequirement": "",
+            "modeldoc": false,
+            "modeldoc_id": "",
+            "modeldoc_vectorIndex": null,
+            "modelComponent": "",
+            "completed": true,
+            "r2u2Completed": true,
+            "smvCompleted": false,
+            "_id": "TurnstileHandsOnturnstilestate"
+        }
+    ]
+}
